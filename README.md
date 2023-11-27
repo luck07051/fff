@@ -28,6 +28,7 @@ alias a='. fff'
 In the fzf menu, select a directory will cd to that directory, when select other file, `fff` will attempt open the file with `open` (you should create your own!).
 
 Few keybinds are:
-
+| Keys                 | Actions               |
+|----------------------|-----------------------|
 | Right / C-l / return | Select the file       |
 | Left / C-h           | Go to upper directory |
