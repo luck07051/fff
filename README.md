@@ -2,6 +2,8 @@
 
 FFF is a minimal terminal file browser using fzf.
 
+![demo video](demo/fff_demo.mp4)
+
 ## Install
 
 Download the scripts. And execute with:
