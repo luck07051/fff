@@ -2,7 +2,7 @@
 
 FFF is a minimal terminal file browser using fzf.
 
-![demo video](demo/fff_demo.mp4)
+https://github.com/luck07051/fff/assets/43342441/2d4d2e5d-7a59-4273-998b-49e171e550af
 
 ## Install
 
