@@ -20,8 +20,14 @@ fi
 _fff_up_dir_temp='/tmp/fff-up-dir'
 
 while :; do
+	# prepare the prompt to show current directory
+	pwd="$(pwd | sed "s#^$HOME#~#")"
+	if [ "$(echo "$pwd" | wc -c)" -gt 25 ]; then
+		pwd="$(printf '%s' "$pwd" | sed 's#^.\+\(/[^/]*\)\(/[^/]*\)$#...\1\2#')"
+	fi
+
 	selected="$($_fzf_fm_lscmd "$PWD" |
-		fzf --prompt "$PWD/" \
+		fzf --prompt "$pwd/" \
 		--preview "$_fzf_fm_preview_cmd" \
 		--preview-window '70%,border-left' \
 		--ansi \
