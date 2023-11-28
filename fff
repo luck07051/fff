@@ -23,7 +23,8 @@ while :; do
 	# prepare the prompt to show current directory
 	pwd="$(pwd | sed "s#^$HOME#~#")"
 	if [ "$(echo "$pwd" | wc -c)" -gt 25 ]; then
-		pwd="$(printf '%s' "$pwd" | sed 's#^.\+\(/[^/]*\)\(/[^/]*\)$#...\1\2#')"
+		# only show first char
+		pwd="$(printf '%s' "$pwd" | sed 's#\([^/.]\)[^/]\+/#\1/#g')"
 	fi
 
 	selected="$($_fzf_fm_lscmd "$PWD" |
